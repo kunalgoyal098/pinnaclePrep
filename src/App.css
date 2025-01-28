@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Zilla+Slab:wght@400;500;600&family=Fredoka:wght@400;500&display=swap');
+
+:root {
+  --primary-color: #2B2D42;
+  --accent-color: #FFDD7C;
+  --text-light: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background: url('/assets/bg-gradient.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8%;
+  background: transparent;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--text-light);
+}
+
+.logo span {
+  font-family: 'Abyssinica SIL', serif;
+  font-size: 1.25rem;
+  color: var(--text-light);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.sign-up-btn {
+  background: white;
+  color: #1E1E2F;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+.sign-up-btn:hover {
+  background: #f0f0f0;
+}
+
+.hero {
+  min-height: 90vh;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+  color: var(--text-light);
+}
+
+.hero-content h1 {
+  font-family: 'Zilla Slab', serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.hero-content p {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.get-start-btn {
+  background: #FFDD7C;
+  color: #1E1E2F;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  min-width: 150px;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.explore-services {
+  text-align: center;
+  color: var(--text-light);
+  padding: 2rem 0;
+  opacity: 0.9;
+}
+
+/* Tablet and smaller desktops */
+@media screen and (max-width: 1024px) {
+  .hero {
+    padding: 0 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .navbar {
+    padding: 1rem 5%;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem 4%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  .sign-up-btn {
+    margin-left: 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 2rem 4%;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    order: 1;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    margin: 1rem auto 2rem;
+  }
+
+  .hero-image {
+    order: 0;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .get-start-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-content p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+}
+
+/* For very small devices */
+@media screen and (max-width: 320px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* For landscape orientation on mobile */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: 4rem 4%;
+  }
+
+  .hero-image {
+    max-width: 40%;
+  }
+}
+
+/* Ensure proper spacing when keyboard is open on mobile */
+@media screen and (max-height: 400px) {
+  .hero {
+    min-height: auto;
+    padding: 2rem 4%;
+  }
+} 

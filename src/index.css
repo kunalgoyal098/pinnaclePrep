@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Zilla+Slab:wght@400;500;600&family=Fredoka:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: url('/assets/bg-gradient.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+html{
+  scroll-behavior: smooth;
+}
